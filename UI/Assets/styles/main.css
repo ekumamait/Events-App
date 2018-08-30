@@ -1,0 +1,114 @@
+html, body{
+    margin:0;
+    padding:0;
+    font-family: calibri;
+    text-align: center;
+}
+a{
+    text-decoration:none;
+    color:#00a82d;
+}
+a:hover{
+    color:#00a82d;
+}
+
+/*    ----    layout css for index page  ----   */
+
+.leftcontent{
+    float: left;
+    width: 50%;
+    margin-top: 70px;
+}
+
+.rightcontent{
+    float:right;
+    width:50%;
+    height:100vh;
+    background:#fff;
+    box-shadow: 0 7px 50px rgba(0,0,0,.3);
+    text-align: center;
+}
+.submit_box{
+    margin: 57px auto;
+    width:80%;
+    text-align: center;
+}
+.introduction p{
+    color: #1d1d1d;
+    font-size: 40px;
+}
+
+/*    ----    css for form content  ----   */
+.form{
+    width: 317px;
+    margin: 47px auto;
+}
+.form .input-box {
+    margin: 20px 0;
+}
+.form .input-box input {
+    width: 100%;
+    font-size: 17px;
+    padding: 12px;
+    color: #777;
+    border: none;
+    border-radius: .3em;
+    border-bottom: 1px solid #ccc;
+    outline: none;
+    box-sizing: border-box;
+}
+.form .input-box input:focus,
+.form .input-box input:valid {
+    border-bottom: 0.5px solid #00a82d;
+}
+.form .input-box input[type="submit"] {
+    border: none;
+    background: #00a82d;
+    color: #fff;
+    font-weight: bold;
+}
+.form .input-box input[type="submit"]:hover {
+    background: #00a82d;
+}
+
+
+/*    ----   layout css for navigation bar  ----   */
+.head{
+    background-color: whitesmoke;
+    box-shadow: 0 0 20px rgba(0,0,0,.3);
+    padding:0;
+    height:77px;
+    width: 100%;
+    border-bottom: 1px solid #00a82d;
+    position: fixed;
+    text-align: center;
+    font-size:30px;
+}
+#navigation{
+    width:70%;
+    margin:0 auto;
+}
+#logo{
+    float:left;
+    border-radius: .3em;
+    margin-top: 18px;
+}
+
+#search {
+    width: 200px;
+    /* -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out; */
+    margin-top: 28px;
+    /* border-radius: .3em; */
+    /* height: 22px; */
+    color: #00a82d;
+    float:right;
+    font-size:20px;
+}
+
+#search:focus {
+    /* width: 100%; */
+    /* border-radius: .3em; */
+}
+
+
