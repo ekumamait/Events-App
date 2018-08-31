@@ -15,7 +15,7 @@
 
 ###### :page_facing_up: DESCRIPTION;
 This is a simple web app where users can post their personal details and receive a unique token to be used as an entrance ticket.
-The main focus of this build in its present is to .
+The main focus of this build in its present is to demonstrate understanding of HTML and CSS Basics ie responsiveness while using media queries and Git workflow and Project Management.
 
 ------------
 
@@ -30,7 +30,8 @@ The main focus of this build in its present is to .
 
 ##### PROJECT DEMO;
 
-Pending.....
+[Here is a link to the application demo]
+(https://github.com/ekumamait/Ticket-Hub/tree/develop/UI)
 
 ------------
 
