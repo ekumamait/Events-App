@@ -16,6 +16,14 @@ html, body{
     text-align: center;
 }
 
+ul{
+    width: 400px;
+}
+
+ul li{
+    
+} 
+
 .head input[type=text] {
     border: none;
     border: 1px solid #00a82d;
@@ -139,10 +147,10 @@ a:hover{
 }
 
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
 
     .leftcontent{
-        width: 100%;
+        width: 100%; float: none
     }
 
     .rightcontent {
@@ -167,14 +175,12 @@ a:hover{
     .head{
         width: 20%; 
         height: 100%;
-        float: left;
+        display: block;
         width: 100px;
-        position: fixed;
         z-index: 1;
         top: 0;
         left: 0;
         background-color: whitesmoke;
-        overflow-x: hidden;
         padding-top: 20px;
     }
  
