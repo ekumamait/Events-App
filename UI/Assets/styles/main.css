@@ -1,15 +1,68 @@
 html, body{
     margin:0;
-    padding:0;
     font-family: calibri;
+}
+
+/*    ----   layout css for navigation bar  ----   */
+
+.head{
+    background-color: whitesmoke;
+    box-shadow: 0 0 20px rgba(0,0,0,.3);
+    padding:0;
+    height:77px;
+    width: 100%;
+    border-bottom: 1px solid #00a82d;
+    position: absolute;
     text-align: center;
 }
-a{
-    text-decoration:none;
-    color:#00a82d;
+
+.head input[type=text] {
+    border: none;
+    border: 1px solid #00a82d;
+    width: 200px;
+    float:right;
+    font-size:10px;
+    margin-right: 50px;
+    border-radius: .3em; 
+    height: 22px;
+    z-index: auto;
 }
-a:hover{
-    color:#00a82d;
+
+.head input[type=text]:focus{
+    width: 250px;
+    transition: .70s;
+}
+
+
+#navigation{
+    width:80%;
+    margin:0 auto;
+}
+
+#logo{
+    float:left;
+    border-radius: .3em;
+    margin-top: 8px;
+    
+}
+
+#search {
+    border: none;
+    width: 800px;
+    float: right;
+    font-size:20px;
+    margin-top: 28px;
+    /* margin-left: 200px; */
+    border-radius: .3em; 
+    height: 22px;
+    color: #00a82d;
+    z-index: auto;
+    /* display: inline-block; */
+}
+
+#search:focus {
+    width: 100%; 
+    border-radius: .3em;
 }
 
 /*    ----    layout css for index page  ----   */
@@ -23,29 +76,40 @@ a:hover{
 .rightcontent{
     float:right;
     width:50%;
-    height:100vh;
     background:#fff;
     box-shadow: 0 7px 50px rgba(0,0,0,.3);
     text-align: center;
 }
+
 .submit_box{
     margin: 57px auto;
-    width:80%;
-    text-align: center;
 }
+
 .introduction p{
     color: #1d1d1d;
     font-size: 40px;
 }
 
+a{
+    text-decoration:none;
+    color:#00a82d;
+}
+
+a:hover{
+    color:#00a82d;
+}
+
 /*    ----    css for form content  ----   */
+
 .form{
     width: 317px;
     margin: 47px auto;
 }
+
 .form .input-box {
     margin: 20px 0;
 }
+
 .form .input-box input {
     width: 100%;
     font-size: 17px;
@@ -57,58 +121,95 @@ a:hover{
     outline: none;
     box-sizing: border-box;
 }
+
 .form .input-box input:focus,
 .form .input-box input:valid {
     border-bottom: 0.5px solid #00a82d;
 }
+
 .form .input-box input[type="submit"] {
     border: none;
     background: #00a82d;
     color: #fff;
     font-weight: bold;
 }
+
 .form .input-box input[type="submit"]:hover {
     background: #00a82d;
 }
 
 
-/*    ----   layout css for navigation bar  ----   */
-.head{
-    background-color: whitesmoke;
-    box-shadow: 0 0 20px rgba(0,0,0,.3);
-    padding:0;
-    height:77px;
-    width: 100%;
-    border-bottom: 1px solid #00a82d;
-    position: fixed;
-    text-align: center;
-    font-size:30px;
-}
-#navigation{
-    width:70%;
-    margin:0 auto;
-}
-#logo{
-    float:left;
-    border-radius: .3em;
-    margin-top: 18px;
-}
+@media only screen and (max-width: 600px) {
 
-#search {
-    width: 200px;
-    /* -webkit-transition: width 0.4s ease-in-out;
-    transition: width 0.4s ease-in-out; */
-    margin-top: 28px;
-    /* border-radius: .3em; */
-    /* height: 22px; */
-    color: #00a82d;
-    float:right;
-    font-size:20px;
-}
+    .leftcontent{
+        width: 100%;
+    }
 
-#search:focus {
-    /* width: 100%; */
-    /* border-radius: .3em; */
-}
+    .rightcontent {
+        margin-left: 50%; 
+        margin-top:70px; 
+        height: 100%;
+        width: 100%;
+        text-align: center;
+    }
 
+    .form {
+        margin-left:200px;
+        width:80%;
+        margin-top:70px;
+        margin-left: 30px;
+    }
+
+    #search {
+        float: left; 
+    } 
+
+    .head{
+        width: 20%; 
+        height: 100%;
+        float: left;
+        width: 100px;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: whitesmoke;
+        overflow-x: hidden;
+        padding-top: 20px;
+    }
+ 
+    #navigation {
+        width: 15px;
+        padding: 6px ;
+        text-decoration: none;
+        font-size: 7px;
+        color: #818181;
+        display: block;
+        text-align: center;
+    }
+
+    #logo {
+        float:left;
+        border-radius: .3em;
+        margin-top: 8px;
+    }
+
+    body {
+        margin: 0;
+        font-family: Calibri;
+        background-color:salmon;
+      }
+      
+  }
+
+
+
+@media only screen and (max-width: 768px) {
+    body {
+        margin: 0;
+        font-family:  sans-serif;
+        background-color:aquamarine;
+      }
+      
+} 
 
