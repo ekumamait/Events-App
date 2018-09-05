@@ -11,15 +11,15 @@ class RegistrationTests(unittest.TestCase):
 
     def test_add_username(self):
         self.register.username("Jane Doe")
-        self.assertEqual(self.register.username("Jane Doe"), "Jane Doe")    
+        self.assertEqual(self.register.details("username"), "Jane Doe")    
 
     def test_add_email(self):
         self.register.email("jane@mail.com")
-        self.assertEqual(self.register.email("Jane"), "jane@mail.com")
+        self.assertEqual(self.register.details("email"), "jane@mail.com")
 
     def test_add_category(self):
         self.register.category("vip")    
-        self.assertEqual(self.register.category("John"), "vip")
+        self.assertEqual(self.register.details("category"), "vip")
 
     def test_missing_key(self):
         with self.assertRaises(KeyError):
