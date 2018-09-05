@@ -21,9 +21,9 @@ class RegistrationTests(unittest.TestCase):
     #     self.register.category("vip")    
     #     self.assertEqual(self.register.details(("category"), "vip")
 
-    # def test_missing_key(self):
-    #     with self.assertRaises(KeyError):
-    #         self.register.email("")
+    def test_missing_key(self):
+        with self.assertRaises(KeyError):
+            self.register.email("")
 
     # def test_add_ordinary_guest(self):
     #     self.register.username("James Safari")
