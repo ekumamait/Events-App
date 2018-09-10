@@ -7,7 +7,7 @@
 ------------
 
 - [x] **DESCRIPTION**
-- [x] **AVAILABLE PAGES**
+- [x] **BRANCH**
 - [ ] **PROJECT DEMO**
 - [x] **TECHNOLOGIES**
 
@@ -19,11 +19,11 @@ The main focus of this build in its present is to .
 
 ------------
 
-###### AVAILABLE PAGES;
+###### BRANCH;
 
-|  Page   | Functionality |
+|  Branch   | Functionality |
 | ------------ | ------------ |
-| index | `Page where users will visit first `  |
+| Database | `saving our data to the database `  |
 
 
 ------------
@@ -35,5 +35,5 @@ Pending.....
 ------------
 
 #### TECHNOLOGIES [Built with] 
-- HTML
-- CSS
+- PYTHON
+- POSTGRESQL
