@@ -7,23 +7,20 @@ class Database:
 
     def table(self):
         create_user_table = """ CREATE TABLE IF NOT EXISTS Users(user_id SERIAL PRIMARY KEY, 
-        first_name VARCHAR(100) NOT NULL, 
-        age SMALLINT NOT NULL, last_name VARCHAR(100) NOT NULL, 
+        first_name VARCHAR(100) NOT NULL, age SMALLINT NOT NULL, last_name VARCHAR(100) NOT NULL, 
         user_email VARCHAR(120) NOT NULL, user_password VARCHAR(20) NOT NULL, date VARCHAR(100) NOT NULL) """
         self.cur.execute(create_user_table)
         self.conn.commit()
 
-        create_events = """ CREATE TABLE IF NOT EXISTS Events(user_id SERIAL, 
-        event_id SERIAL PRIMARY KEY, event_name VARCHAR(100) NOT NULL,
-        event_location VARCHAR(20) NOT NULL, event_price VARCHAR(50) NOT NULL, 
-        event_date VARCHAR(100) NOT NULL, FOREIGN KEY (user_id) REFERENCES Users (user_id)) """
+        create_events = """ CREATE TABLE IF NOT EXISTS Events(event_id SERIAL PRIMARY KEY, 
+        event_name VARCHAR(100) NOT NULL,event_location VARCHAR(20) NOT NULL, 
+        event_price VARCHAR(50) NOT NULL,event_date VARCHAR(100) NOT NULL) """
         self.cur.execute(create_events)
         self.conn.commit()
 
-        create_user_tickets = """ CREATE TABLE IF NOT EXISTS Tickets(user_id SERIAL PRIMARY KEY, 
-        events_id SERIAL PRIMARY KEY, ticket_id SERIAL PRIMARY KEY, is_valid VARCHAR(100) NOT NULL, 
-        verification_code VARCHAR(20) NOT NULL, FOREIGN KEY (event_id) REFERENCES Event (event_id), 
-        FOREIGN KEY (user_id) REFERENCES Users (user_id)) """
+        create_user_tickets = """ CREATE TABLE IF NOT EXISTS Tickets(user_id SERIAL REFERENCES Users (user_id), 
+        events_id SERIAL REFERENCES Events (event_id), ticket_id SERIAL PRIMARY KEY, is_valid VARCHAR(100) NOT NULL, 
+        verification_code VARCHAR(20) NOT NULL) """
         self.cur.execute(create_user_tickets)
         self.conn.commit()
         self.conn.close()
